@@ -1,0 +1,38 @@
+{
+  "name": "@camilledev/background-rainbow-lines",
+  "version": "1.0.1",
+  "description": "Animated multi-color background lines evoking EU flags, built with Framer Motion (motion) and React.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "sideEffects": false,
+  "keywords": ["react", "background", "animation", "framer-motion", "motion", "svg", "hero", "nextjs", "tailwind", "europe"],
+  "author": { "name": "Camille Guerineau", "url": "https://github.com/spiritracking-arch" },
+  "repository": { "type": "git", "url": "git+https://github.com/spiritracking-arch/background-rainbow-lines.git" },
+  "bugs": { "url": "https://github.com/spiritracking-arch/background-rainbow-lines/issues" },
+  "homepage": "https://github.com/spiritracking-arch/background-rainbow-lines#readme",
+  "peerDependencies": {
+    "react": ">=18",
+    "motion": ">=11"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "react": "^18.3.0",
+    "@types/react": "^18.3.0",
+    "motion": "^11.0.0"
+  },
+  "scripts": {
+    "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
+    "prepublishOnly": "npm run build"
+  },
+  "license": "MIT"
+}
